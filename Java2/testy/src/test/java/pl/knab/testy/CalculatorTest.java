@@ -60,4 +60,28 @@ public class CalculatorTest {
         assertEquals(expResult, result);
     }
     
+    /**
+     * Test of multiplication method, of class Calculator.
+     */
+    @Test
+    public void testMultiplication() {
+    	System.out.println("multiplication");
+    	int a=0;
+    	int b=0;
+    	Calculator instance =new Calculator();
+    	int expResult=0;
+    	int result=instance.multiplication(a,b);
+    	assertEquals(expResult,result);
+    }
+    /**
+     * Test of division method, of class Calculator
+     */
+    @Test(expected = RuntimeException.class)
+    public void testDivision() {
+    	int a=1;
+    	int b=0;
+    	Calculator instance=new Calculator();
+    	int result=instance.division(a, b);
+
+    }
 }
